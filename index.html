@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큐브 테스트</title>
+
+    
+
+    <style>
+        body{background: #222222;}
+
+        .cube_wrap {
+            width: 700px;
+            height: 700px;
+            margin: 50px auto;
+            background: #222222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        .cube_wrap .cube {
+            width: 70px;
+            height: 70px;
+
+            position: relative;
+            
+            transform-style: preserve-3d;
+            transform: rotate(0deg, 0deg);
+            transition: 1s;
+        }
+
+        .cube_wrap .cube .cube_face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            color: #ffffff;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .front {
+            display: none;
+            background: #222222;
+            /* opacity: 0.5; */
+            transform: rotateY(0deg) translateZ(35px)
+        }
+
+        .back {
+            background: #555;
+            /* opacity: 0.5; */
+            transform: rotateY(180deg) translateZ(35px)
+        }
+
+        .right {
+            background: #666666;
+            /* opacity: 0.5; */
+            transform: rotateY(90deg) translateZ(35px)
+        }
+
+        .left {
+            background: #999;
+            /* opacity: 0.5; */
+            transform: rotateY(-90deg) translateZ(35px)
+        }
+
+        .top {
+            background: #ffffff;
+            /* opacity: 0.5; */
+            transform: rotateX(90deg) translateZ(35px)
+        }
+
+        .bottom {
+            background: #e5e5e5;
+            /* opacity: 0.5; */
+            transform: rotateX(-90deg) translateZ(35px)
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="cube_wrap">
+        <div class="cube">
+            <div class="cube_face front">front</div>
+            <div class="cube_face back">back</div>
+            <div class="cube_face right">right</div>
+            <div class="cube_face left">left</div>
+            <div class="cube_face top">top</div>
+            <div class="cube_face bottom">bottom</div>
+        </div>
+    </div>
+
+    <!-- <script src="js/jquery-3.5.1.min.js"></script> -->
+    <script src="js/cubeflip.js"></script>
+</body>
+
+</html>
